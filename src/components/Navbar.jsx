@@ -1,14 +1,14 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <div className="navbar-wrapper">
       <nav className="navbar">
-        <div className="nav-brand" style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.5px', textTransform: 'uppercase' }}>
+        <Link to="/" className="nav-brand" style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.5px', textTransform: 'uppercase', color: 'inherit' }}>
           Ketaki Patil
-        </div>
+        </Link>
         <div className="nav-links">
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
+          <NavLink to="/" end className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
             Home
           </NavLink>
           <NavLink to="/experience" className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>
